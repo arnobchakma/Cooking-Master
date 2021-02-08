@@ -38,6 +38,7 @@ const ingredientDetail = meals => {
     ingredientWrapper.innerHTML = `
     <img src = "${meals.strMealThumb}">
         <h2 class="unique">${meals.strMeal}</h2>
+        <h5>Ingredient</h5>
         <div class="list">
             <p>${meals.strIngredient1}</p>
             <p>${meals.strIngredient2}</p>
