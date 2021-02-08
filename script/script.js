@@ -1,15 +1,14 @@
 const onclickWithBtn = () => {
     const catchInput = document.getElementById('search-input').value;
-    if (catchInput == "") {
+    if (catchInput === "") {
         alert('Please write something then click Search')
-    } else if (catchInput == null) {
-        alert('Sorry there have no items yet')
+    } else {
+        const url = `https://www.themealdb.com/api/json/v1/1/search.php?f=${catchInput}`
+        fetch(url)
+            .then(res => res.json())
+            .then(data => ShowOnDisplay(data.meals));
+        document.getElementById('search-input').value = "";
     }
-    const url = `https://www.themealdb.com/api/json/v1/1/search.php?f=${catchInput}`
-    fetch(url)
-        .then(res => res.json())
-        .then(data => ShowOnDisplay(data.meals));
-    document.getElementById('search-input').value = "";
 }
 
 const ShowOnDisplay = meals => {
