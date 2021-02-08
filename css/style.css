@@ -93,6 +93,8 @@ div#ingredient-wrapper {
     color: #fffcfcbf;
     font-family: arial;
     line-height: 30px;
+    text-align: justify;
+    margin-left: 10px;
 }
 
 h2.unique {
