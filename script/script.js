@@ -1,7 +1,9 @@
 const onclickWithBtn = () => {
     const catchInput = document.getElementById('search-input').value;
-    if(catchInput == ""){
+    if (catchInput == "") {
         alert('Please write something then click Search')
+    } else if (catchInput == null) {
+        alert('Sorry there have no items yet')
     }
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?f=${catchInput}`
     fetch(url)
@@ -12,6 +14,9 @@ const onclickWithBtn = () => {
 
 const ShowOnDisplay = meals => {
     const searchMeal = document.getElementById('search-meal');
+    searchMeal.innerHTML = "";
+    const ingredientHide = document.getElementById('ingredient-wrapper');
+    ingredientHide.innerHTML = "";
     meals.forEach(meal => {
         const singleMeal = document.createElement('div');
         singleMeal.className = 'single-meal';
@@ -31,7 +36,6 @@ const ingredient = mealList => {
     fetch(url)
         .then(res => res.json())
         .then(data => ingredientDetail(data.meals[0]));
-    //.then(data => console.log(data.meals[0]));
 }
 const ingredientDetail = meals => {
     const ingredientWrapper = document.getElementById('ingredient-wrapper');
@@ -51,6 +55,5 @@ const ingredientDetail = meals => {
             <p>${meals.strIngredient9}</p>
             <p>${meals.strIngredient10}</p>
         </div>
-        
     `
 }
