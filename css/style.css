@@ -4,7 +4,7 @@
 }
 
 body {
-    background: #2f77a9;
+    background: rgb(38 141 213);
 }
 
 input.searchInput {
@@ -18,8 +18,9 @@ input.searchInput {
 }
 
 button {
-    border: 1px solid white;
-    padding: 16px;
+    border: none;
+    padding: 15px;
+    height: 50px;
     width: 91px;
     border-radius: 0px 5px 5px 0px;
     margin-left: 0px;
@@ -44,7 +45,7 @@ button {
 /* javascript areas start */
 div#search-meal {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .single-meal {
@@ -58,14 +59,19 @@ div#search-meal {
 }
 
 h2 {
-    color: white;
+    color: rgb(255 253 253 / 82%);
     margin-top: 10px;
     text-align: center;
+    font-size: 18px;
+    height: 47px;
 }
 
 .singles {
+    border: 1px solid #ffffff8f;
     border-radius: 10px;
+    background: rgb(248 248 248 / 10%);
 }
+
 div#ingredient-wrapper img {
     width: 100%;
 }
@@ -76,13 +82,20 @@ div#ingredient-wrapper {
     text-align: center;
     cursor: pointer;
 }
+
+.list {
+    border: 1px solid #ffffff36;
+    margin-bottom: 10px;
+}
+
 .list p {
-    font-size: 22px;
-    color: white;
+    font-size: 16px;
+    color: #fffcfcbf;
     font-family: arial;
     line-height: 30px;
 }
 
 h2.unique {
-    font-size: 45px;
+    font-size: 25px;
+    color: #f6f6f6e0;
 }

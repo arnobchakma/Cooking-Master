@@ -1,5 +1,8 @@
 const onclickWithBtn = () => {
     const catchInput = document.getElementById('search-input').value;
+    if(catchInput == ""){
+        alert('Please write something then click Search')
+    }
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?f=${catchInput}`
     fetch(url)
         .then(res => res.json())
